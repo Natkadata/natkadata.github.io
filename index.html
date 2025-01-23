@@ -8,50 +8,35 @@
 </head>
 <body>
     <header>
-        <h1>Cześć, jestem Natalia Andrzejczyk</h1>
-        <p>Analityk danych | SQL | Power BI | Tableau</p>
+        <div class="container">
+            <h1>Natalia Andrzejczyk</h1>
+            <p>Analityk danych | SQL | Power BI | Tableau</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">O mnie</a></li>
+                    <li><a href="#projects">Projekty</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <h2>O mnie</h2>
-        <p>Jestem pasjonatką analizy danych z doświadczeniem w SQL i wizualizacjach BI. Pomagam firmom podejmować lepsze decyzje na podstawie danych.</p>
+    <section id="about">
+        <div class="container">
+            <h2>O mnie</h2>
+            <p>Cześć! Jestem analitykiem danych z pasją do przekształcania surowych danych w wartościowe informacje. Specjalizuję się w SQL, Power BI i Tableau, dostarczając kompleksowe rozwiązania analityczne.</p>
+        </div>
     </section>
 
-    <section>
-        <h2>Moje projekty</h2>
-        <ul>
-            <li><a href="projekty/projekt1.html">Analiza danych marketingowych</a></li>
-            <li><a href="projekty/projekt2.html">Raport sprzedażowy</a></li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>Znajdź mnie na <a href="https://linkedin.com">LinkedIn</a> | <a href="https://github.com/natkadata">GitHub</a></p>
-        <p>&copy; <span id="year"></span> Natalia Andrzejczyk - Portfolio Analityka Danych</p>
-    </footer>
-
-    <!-- Przycisk "Powrót na górę strony" -->
-    <button onclick="scrollToTop()" id="topBtn" title="Do góry">⬆️</button>
-
-    <script>
-        // Funkcja przewijania na górę strony
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Funkcja pokazywania przycisku po przewinięciu w dół
-        let topButton = document.getElementById("topBtn");
-
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                topButton.style.display = "block";
-            } else {
-                topButton.style.display = "none";
-            }
-        };
-
-        // Automatyczna aktualizacja roku w stopce
-        document.getElementById("year").innerText = new Date().getFullYear();
-    </script>
-</body>
-</html>
+    <section id="projects">
+        <div class="container">
+            <h2>Moje projekty</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3><a href="projekty/projekt1.html">Analiza kampanii marketingowych</a></h3>
+                    <p>Analiza skuteczności kampanii online za pomocą SQL i Power BI.</p>
+                </div>
+                <div class="project-item">
+                    <h3><a href="projekty/projekt2.html">Raport sprzedażowy</a></h3>
+                    <p>Przygotowanie dynamicznych dashboardów w Power BI dla działu sprzedaży.</p>
+                </div
