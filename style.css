@@ -1,12 +1,22 @@
-/* Ogólny styl strony */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
+/* Kolory */
+:root {
+    --primary-color: #2C3E50; /* Ciemny granat */
+    --secondary-color: #ECF0F1; /* Jasny szary */
+    --text-color: #333;
+    --accent-color: #3498DB; /* Niebieski akcent */
+    --footer-color: #2C3E50;
 }
 
+/* Ogólne style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+/* Kontener do sekcji */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -15,16 +25,17 @@ body {
 
 /* Nagłówek */
 header {
-    background: #2C3E50;
+    background: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 60px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
     font-size: 2.5rem;
-    margin: 0;
     font-weight: 600;
+    margin: 0;
 }
 
 header p {
@@ -32,6 +43,7 @@ header p {
     margin: 10px 0;
 }
 
+/* Nawigacja */
 nav ul {
     list-style: none;
     padding: 0;
@@ -43,7 +55,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFD700;
+    color: var(--accent-color);
     text-decoration: none;
     font-size: 1.1rem;
 }
@@ -54,13 +66,17 @@ nav ul li a:hover {
 
 /* Sekcje */
 section {
-    padding: 60px 20px;
-    text-align: center;
+    background: #fff;
+    padding: 40px 20px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
 }
 
 section h2 {
     font-size: 2rem;
-    color: #2C3E50;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -87,7 +103,7 @@ section p {
 }
 
 .project-item h3 {
-    color: #2C3E50;
+    color: var(--primary-color);
     margin: 0;
 }
 
@@ -97,7 +113,7 @@ section p {
 
 /* Stopka */
 footer {
-    background: #2C3E50;
+    background: var(--footer-color);
     color: white;
     text-align: center;
     padding: 20px;
@@ -109,19 +125,19 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #2C3E50;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 15px 20px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 24px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     display: none;
 }
 
 #topBtn:hover {
-    background-color: #FFD700;
+    background-color: var(--accent-color);
 }
 
 /* Responsywność */
