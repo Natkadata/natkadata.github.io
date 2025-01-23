@@ -28,8 +28,22 @@ footer {
     color: white;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    font-size: 18px;
+}
+
 a {
     color: #4CAF50;
     text-decoration: none;
     font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
 }
