@@ -1,140 +1,69 @@
-/* Płynne przewijanie */
-html {
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Natalia Andrzejczyk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cześć, jestem Natalia Andrzejczyk</h1>
+            <p>Analityk danych | SQL | Power BI | Tableau</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">O mnie</a></li>
+                    <li><a href="#projects">Projekty</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-/* Kolory */
-:root {
-    --primary-color: #2C3E50; /* Ciemny granat */
-    --secondary-color: #ECF0F1; /* Jasny szary */
-    --text-color: #333;
-    --accent-color: #3498DB; /* Niebieski akcent */
-    --footer-color: #2C3E50;
-}
+    <section id="about">
+        <div class="container">
+            <h2>O mnie</h2>
+            <p>Jestem pasjonatką analizy danych z doświadczeniem w SQL i wizualizacjach BI. Pomagam firmom podejmować lepsze decyzje na podstawie danych.</p>
+        </div>
+    </section>
 
-/* Ogólne style */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--secondary-color);
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-}
+    <section id="projects">
+        <div class="container">
+            <h2>Moje projekty</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3><a href="projekty/projekt1.html">Analiza kampanii marketingowych</a></h3>
+                    <p>Analiza skuteczności kampanii online za pomocą SQL i Power BI.</p>
+                </div>
+                <div class="project-item">
+                    <h3><a href="projekty/projekt2.html">Raport sprzedażowy</a></h3>
+                    <p>Przygotowanie dynamicznych dashboardów w Power BI dla działu sprzedaży.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Kontener do sekcji */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <ul>
+                <li>Email: <a href="mailto:natalia@example.com">natalia@example.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com">LinkedIn</a></li>
+                <li>GitHub: <a href="https://github.com/natkadata">GitHub</a></li>
+            </ul>
+        </div>
+    </section>
 
-/* Nagłówek */
-header {
-    background: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Natalia Andrzejczyk - Portfolio Analityka Danych</p>
+        </div>
+    </footer>
 
-header h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
+    <script>
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
 
-header p {
-    font-size: 1.3rem;
-    opacity: 0.9;
-}
-
-/* Nawigacja */
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-/* Sekcje */
-section {
-    background: #fff;
-    padding: 40px 20px;
-    margin: 40px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Stopka */
-footer {
-    background: var(--footer-color);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* Przycisk "Do góry" */
-#topBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    display: none;
-}
-
-#topBtn:hover {
-    background-color: var(--accent-color);
-}
-
-/* Responsywność */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .project-list {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+</body>
+</html>
