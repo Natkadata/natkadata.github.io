@@ -11,10 +11,12 @@
         <h1>Cześć, jestem Natalia Andrzejczyk</h1>
         <p>Analityk danych | SQL | Power BI | Tableau</p>
     </header>
+
     <section>
         <h2>O mnie</h2>
-        <p>Jestem pasjonatką analizy danych z doświadczeniem w SQL i wizualizacjach BI.</p>
+        <p>Jestem pasjonatką analizy danych z doświadczeniem w SQL i wizualizacjach BI. Pomagam firmom podejmować lepsze decyzje na podstawie danych.</p>
     </section>
+
     <section>
         <h2>Moje projekty</h2>
         <ul>
@@ -22,18 +24,34 @@
             <li><a href="projekty/projekt2.html">Raport sprzedażowy</a></li>
         </ul>
     </section>
+
     <footer>
         <p>Znajdź mnie na <a href="https://linkedin.com">LinkedIn</a> | <a href="https://github.com/natkadata">GitHub</a></p>
+        <p>&copy; <span id="year"></span> Natalia Andrzejczyk - Portfolio Analityka Danych</p>
     </footer>
 
-<button onclick="scrollToTop()" id="topBtn" title="Do góry">⬆️</button>
+    <!-- Przycisk "Powrót na górę strony" -->
+    <button onclick="scrollToTop()" id="topBtn" title="Do góry">⬆️</button>
 
-<script>
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-</script>
+    <script>
+        // Funkcja przewijania na górę strony
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
+        // Funkcja pokazywania przycisku po przewinięciu w dół
+        let topButton = document.getElementById("topBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+
+        // Automatyczna aktualizacja roku w stopce
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
 </body>
 </html>
-
