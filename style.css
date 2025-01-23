@@ -1,69 +1,57 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Natalia Andrzejczyk</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Cześć, jestem Natalia Andrzejczyk</h1>
-            <p>Analityk danych | SQL | Power BI | Tableau</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">O mnie</a></li>
-                    <li><a href="#projects">Projekty</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+/* Styl ogólny */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ECF0F1;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
 
-    <section id="about">
-        <div class="container">
-            <h2>O mnie</h2>
-            <p>Jestem pasjonatką analizy danych z doświadczeniem w SQL i wizualizacjach BI. Pomagam firmom podejmować lepsze decyzje na podstawie danych.</p>
-        </div>
-    </section>
+/* Nagłówek */
+header {
+    background: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
 
-    <section id="projects">
-        <div class="container">
-            <h2>Moje projekty</h2>
-            <div class="project-list">
-                <div class="project-item">
-                    <h3><a href="projekty/projekt1.html">Analiza kampanii marketingowych</a></h3>
-                    <p>Analiza skuteczności kampanii online za pomocą SQL i Power BI.</p>
-                </div>
-                <div class="project-item">
-                    <h3><a href="projekty/projekt2.html">Raport sprzedażowy</a></h3>
-                    <p>Przygotowanie dynamicznych dashboardów w Power BI dla działu sprzedaży.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Sekcje */
+section {
+    background: white;
+    padding: 40px 20px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
 
-    <section id="contact">
-        <div class="container">
-            <h2>Kontakt</h2>
-            <ul>
-                <li>Email: <a href="mailto:natalia@example.com">natalia@example.com</a></li>
-                <li>LinkedIn: <a href="https://linkedin.com">LinkedIn</a></li>
-                <li>GitHub: <a href="https://github.com/natkadata">GitHub</a></li>
-            </ul>
-        </div>
-    </section>
+/* Linki */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Natalia Andrzejczyk - Portfolio Analityka Danych</p>
-        </div>
-    </footer>
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-    <script>
-        document.getElementById("year").innerText = new Date().getFullYear();
-    </script>
+nav ul li a {
+    color: #3498DB;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
 
-</body>
-</html>
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Stopka */
+footer {
+    background: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
