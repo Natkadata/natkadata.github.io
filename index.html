@@ -14,4 +14,71 @@
             <nav>
                 <ul>
                     <li><a href="#about">O mnie</a></li>
-                    <li><a href="#projects">Projekty</a><
+                    <li><a href="#projects">Projekty</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>O mnie</h2>
+            <p>Jestem pasjonatką analizy danych z doświadczeniem w SQL i wizualizacjach BI. Pomagam firmom podejmować lepsze decyzje na podstawie danych.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Moje projekty</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3><a href="projekty/projekt1.html">Analiza kampanii marketingowych</a></h3>
+                    <p>Analiza skuteczności kampanii online za pomocą SQL i Power BI.</p>
+                </div>
+                <div class="project-item">
+                    <h3><a href="projekty/projekt2.html">Raport sprzedażowy</a></h3>
+                    <p>Przygotowanie dynamicznych dashboardów w Power BI dla działu sprzedaży.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <ul>
+                <li>Email: <a href="mailto:natalia@example.com">natalia@example.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com">LinkedIn</a></li>
+                <li>GitHub: <a href="https://github.com/natkadata">GitHub</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Natalia Andrzejczyk - Portfolio Analityka Danych</p>
+        </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="topBtn" title="Do góry">⬆️</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        let topButton = document.getElementById("topBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
